@@ -1,13 +1,14 @@
 extends CharacterBody3D;
 
-@onready var nav_agent = $Navigator;
+@onready var nav_agent = $NavigationAgent3D;
 
 const SPEED = 5.0;
 
 var player_position := Vector3.ZERO;
 var next_nav_point := Vector3.ZERO;
 
-var health := 100.0;
+var health := 10.0;
+
 
 func _ready():
 	pass;

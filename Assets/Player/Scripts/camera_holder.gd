@@ -27,10 +27,11 @@ func _input(event) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	current_delta = player.get_position_delta();
-	handle_vertical_bob(delta, current_delta);
-	handle_horizontal_bob(delta, current_delta);
-	rotation.x = clamp(rotation.x, deg_to_rad(-65), deg_to_rad(90));
+	if not OptionSettings.paused:
+		current_delta = player.get_position_delta();
+		handle_vertical_bob(delta, current_delta);
+		handle_horizontal_bob(delta, current_delta);
+		rotation.x = clamp(rotation.x, deg_to_rad(-65), deg_to_rad(90));
 
 
 func handle_vertical_bob(delta: float, current_delta: Vector3) -> void:

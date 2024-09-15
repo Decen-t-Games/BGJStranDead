@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://beg3frux7k0yp"]
 
-[ext_resource type="Script" path="res://Assets/Enemies/Zombie/zombie.gd" id="1_x0k4p"]
+[ext_resource type="Script" path="res://Assets/Enemies/Zombie/Scripts/zombie.gd" id="1_x0k4p"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r6vda"]
 size = Vector3(1.5, 2.5, 1.5)
@@ -20,7 +20,6 @@ script = ExtResource("1_x0k4p")
 shape = SubResource("BoxShape3D_r6vda")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-unique_name_in_owner = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_2ggx3")

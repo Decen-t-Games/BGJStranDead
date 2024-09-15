@@ -2,9 +2,13 @@ extends Node3D;
 
 @onready var player: CharacterBody3D = $Player
 @onready var menu: Control = $Menu
+@onready var spawns: Node3D = $NavigationRegion3D/SpawnHolder
+@onready var zombie: PackedScene = load("res://Assets/Enemies/Zombie/zombie.tscn");
+@onready var navigation_region: NavigationRegion3D = $NavigationRegion3D
 
 # UI Variables
 var menu_shown := false;
+var instance;
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,3 +34,14 @@ func _physics_process(delta: float) -> void:
 
 func _on_button_quit_pressed() -> void:
 	get_tree().quit();
+
+func _get_random_child(parent_node):
+	var random_id = randi() % parent_node.get_child_count()
+	return parent_node.get_child(random_id)
+
+func _on_zombie_spawn_timer_timeout():
+	print("Timed");
+	var spawn_point = _get_random_child(spawns).global_position;
+	instance = zombie.instantiate();
+	instance.position = spawn_point;
+	navigation_region.add_child(instance);
