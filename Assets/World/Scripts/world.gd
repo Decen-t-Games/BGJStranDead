@@ -3,7 +3,7 @@ extends Node3D;
 @onready var player: CharacterBody3D = $Player
 @onready var menu: Control = $Menu
 @onready var spawns: Node3D = $NavigationRegion3D/SpawnHolder
-@onready var zombie: PackedScene = load("res://Assets/Enemies/Zombie/zombie.tscn");
+@onready var zombie: PackedScene = load("res://Assets/Enemies/Raptor/raptor.tscn");
 @onready var navigation_region: NavigationRegion3D = $NavigationRegion3D
 
 # UI Variables
