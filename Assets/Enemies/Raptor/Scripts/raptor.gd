@@ -1,6 +1,7 @@
 extends CharacterBody3D;
 
 @onready var nav_agent = $Navigator;
+@onready var hitbox: CollisionShape3D = $Hitbox
 
 const SPEED = 5.0;
 

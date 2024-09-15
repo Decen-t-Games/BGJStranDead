@@ -21,11 +21,11 @@ func _input(event: InputEvent) -> void:
 		if OptionSettings.paused:
 			menu.hide();
 			OptionSettings.paused = false;
-			get_tree().call_group("player", "_handle_pause");
+			get_tree().call_group("pausable", "_handle_pause");
 		else:
 			menu.show();
 			OptionSettings.paused = true;
-			get_tree().call_group("player", "_handle_pause");
+			get_tree().call_group("pausable", "_handle_pause");
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -36,12 +36,11 @@ func _on_button_quit_pressed() -> void:
 	get_tree().quit();
 
 func _get_random_child(parent_node):
-	var random_id = randi() % parent_node.get_child_count()
-	return parent_node.get_child(random_id)
+	return parent_node.get_child(randi() % parent_node.get_child_count())
 
 func _on_zombie_spawn_timer_timeout():
-	print("Timed");
-	var spawn_point = _get_random_child(spawns).global_position;
-	instance = zombie.instantiate();
-	instance.position = spawn_point;
-	navigation_region.add_child(instance);
+	if not OptionSettings.paused:
+		var spawn_point = _get_random_child(spawns).global_position;
+		instance = zombie.instantiate();
+		instance.position = spawn_point;
+		navigation_region.add_child(instance);

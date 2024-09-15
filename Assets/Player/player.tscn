@@ -3,11 +3,14 @@
 [ext_resource type="Script" path="res://Assets/Player/Scripts/player.gd" id="1_a8sh5"]
 [ext_resource type="Script" path="res://Assets/Player/Scripts/camera_holder.gd" id="2_xi58s"]
 [ext_resource type="PackedScene" uid="uid://bs3cbtanafnmy" path="res://Assets/Guns/Rifle/rifle.tscn" id="3_e5tov"]
-[ext_resource type="Texture2D" uid="uid://bn1e08cb11kde" path="res://Assets/Guns/Rifle/Rifle_7.png" id="4_6p076"]
+[ext_resource type="StyleBox" uid="uid://dahhd3qgrchk4" path="res://Assets/Menus/Theme/panels.tres" id="5_jx3f6"]
 [ext_resource type="Theme" uid="uid://dl3j2x4xwv50o" path="res://Assets/Menus/Theme/theme.tres" id="5_y257v"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_it13n"]
 height = 2.93569
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_idhue"]
+load_path = "res://.godot/imported/Rifle_7.png-b5588ff5aaf24a0e379cff3664e9bfed.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2te01"]
 resource_name = "material_7"
@@ -15,7 +18,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("4_6p076")
+albedo_texture = SubResource("CompressedTexture2D_idhue")
 texture_filter = 0
 texture_repeat = false
 
@@ -50,19 +53,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8jqg3")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r58qh"]
-bg_color = Color(0.0296, 0.0356667, 0.04, 0.352941)
-border_width_left = 15
-border_width_top = 15
-border_width_right = 15
-border_width_bottom = 15
-border_color = Color(0, 0, 0, 0)
-border_blend = true
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_77vmn"]
 bg_color = Color(0.448737, 0, 0.00847407, 1)
@@ -259,7 +249,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("5_y257v")
-theme_override_styles/panel = SubResource("StyleBoxFlat_r58qh")
+theme_override_styles/panel = ExtResource("5_jx3f6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CameraHolder/Camera3D/UIHolder/UI"]
 layout_mode = 2

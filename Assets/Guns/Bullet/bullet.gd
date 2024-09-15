@@ -1,26 +1,25 @@
 extends Node3D;
 
 
-const SPEED = 40.0;
-
 @onready var mesh = $MeshInstance3D;
 @onready var ray = $RayCast3D;
-@onready var particles = $GPUParticles3D;
+
+@onready var bullet_material: StandardMaterial3D;
+@onready var damage: float;
+@onready var speed: float;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass; # Replace with function body.
+	mesh.set_surface_override_material(0, bullet_material);
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if not OptionSettings.paused:
-		position += transform.basis * Vector3(0, 0, -SPEED) * delta;
+		position += transform.basis * Vector3(0, 0, -speed) * delta;
 		if ray.is_colliding():
 			mesh.visible = false;
-			particles.emitting = true;
 			get_tree().call_group("enemies", "_hurt", 10, ray.get_collider());
-			await get_tree().create_timer(1.0).timeout;
 			queue_free();
 		if position.length() > 300.0:
 			queue_free();

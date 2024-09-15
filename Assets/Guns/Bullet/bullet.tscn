@@ -1,47 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://1j36qnbucwni"]
+[gd_scene load_steps=3 format=3 uid="uid://1j36qnbucwni"]
 
 [ext_resource type="Script" path="res://Assets/Guns/Bullet/bullet.gd" id="1_bfork"]
-[ext_resource type="Material" path="res://Assets/Guns/Bullet/RifleParticle.tres" id="2_lfes4"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c10pu"]
-albedo_color = Color(0.447059, 0.964706, 0.866667, 1)
-emission_enabled = true
-emission = Color(0, 0.537255, 0.933333, 1)
-emission_energy_multiplier = 11.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_7xt7k"]
-material = SubResource("StandardMaterial3D_c10pu")
 size = Vector3(0.05, 0.05, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7oior"]
-albedo_color = Color(0.447059, 0.964706, 0.866667, 1)
-emission_enabled = true
-emission = Color(0, 0.537255, 0.933333, 1)
-emission_energy_multiplier = 11.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2tn4u"]
-albedo_color = Color(0.231373, 0.65098, 0.686275, 1)
-emission_enabled = true
-emission = Color(0, 0.537255, 0.933333, 1)
-emission_energy_multiplier = 11.0
-
-[sub_resource type="BoxMesh" id="BoxMesh_dojcl"]
-material = SubResource("StandardMaterial3D_2tn4u")
-size = Vector3(0.04, 0.04, 0.04)
 
 [node name="Bullet" type="Node3D" groups=["pausable"]]
 script = ExtResource("1_bfork")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_7xt7k")
-surface_material_override/0 = SubResource("StandardMaterial3D_7oior")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0, -0.6)
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-emitting = false
-one_shot = true
-explosiveness = 1.0
-process_material = ExtResource("2_lfes4")
-draw_pass_1 = SubResource("BoxMesh_dojcl")

@@ -2,10 +2,12 @@ extends CharacterBody3D;
 
 # Onready variables
 @onready var camera: Camera3D = $CameraHolder/Camera3D;
-@onready var health_bar: ProgressBar = $CameraHolder/Camera3D/UIHolder/UI/VBoxContainer/HealthBar
-@onready var stamina_bar: ProgressBar = $CameraHolder/Camera3D/UIHolder/UI/VBoxContainer/StaminaBar
+@onready var health_bar: ProgressBar = $CameraHolder/Camera3D/UIHolder/UI/VBoxContainer/HealthBar;
+@onready var stamina_bar: ProgressBar = $CameraHolder/Camera3D/UIHolder/UI/VBoxContainer/StaminaBar;
+@onready var weapon_stamina_bar: ProgressBar = $CameraHolder/Camera3D/UIHolder/UI/VBoxContainer/HeatingBar
+
 @onready var anim_player: AnimationPlayer = $AnimationPlayer;
-@onready var ui: Control = $CameraHolder/Camera3D/UIHolder/UI
+@onready var ui: Control = $CameraHolder/Camera3D/UIHolder/UI;
 
 # Player motion control
 const AIR_SPEED_DIMINISH := 1.0;
@@ -115,7 +117,7 @@ func move_and_sprint(delta) -> void:
 
 		# Start recovery after the delay (when player stops sprinting)
 		stamina_recovery_timer += delta	
-		if stamina_recovery_timer >= SPRINT_RECOVERY_DELAY:	
+		if stamina_recovery_timer >= SPRINT_RECOVERY_DELAY:
 			if stamina < MIN_STAMINA_RESUME_FROM_NONE:
 				can_sprint = false;
 			else:
@@ -135,6 +137,10 @@ func reduce_health(amount: float):
 func manage_ui() -> void:
 	stamina_bar.set_value(stamina);
 	health_bar.set_value(health);
+
+
+func update_weapon_stamina(w_stamina: float) -> void:
+	weapon_stamina_bar.set_value(w_stamina);
 
 
 func reset():

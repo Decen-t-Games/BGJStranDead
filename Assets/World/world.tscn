@@ -30,7 +30,7 @@ polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 [node name="World" type="Node3D"]
 script = ExtResource("1_h5x6e")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." groups=["pausable"]]
 stream = SubResource("AudioStreamMP3_db0qb")
 autoplay = true
 script = ExtResource("6_l3imu")
