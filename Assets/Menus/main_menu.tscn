@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctx0gcdslvpjh"]
+[gd_scene load_steps=4 format=3 uid="uid://ctx0gcdslvpjh"]
 
 [ext_resource type="Script" path="res://Assets/Menus/Scripts/main_menu_controller.gd" id="1_wnej0"]
 [ext_resource type="StyleBox" uid="uid://dahhd3qgrchk4" path="res://Assets/Menus/Theme/panels.tres" id="2_uyp6o"]
+[ext_resource type="Theme" uid="uid://dl3j2x4xwv50o" path="res://Assets/Menus/Theme/theme.tres" id="3_joqgt"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -34,6 +35,7 @@ theme_override_constants/separation = 15
 
 [node name="Title" type="RichTextLabel" parent="Background/Menu/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_joqgt")
 theme_override_font_sizes/bold_italics_font_size = 64
 theme_override_font_sizes/italics_font_size = 64
 theme_override_font_sizes/mono_font_size = 64
@@ -45,26 +47,31 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="HSeparator" type="HSeparator" parent="Background/Menu/VBoxContainer"]
+modulate = Color(0.635294, 0.0901961, 0, 1)
 layout_mode = 2
 
 [node name="ButtonSingleplayer" type="Button" parent="Background/Menu/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_joqgt")
 theme_override_font_sizes/font_size = 20
 text = "Singeplayer"
 
 [node name="ButtonMultiplayer" type="Button" parent="Background/Menu/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_joqgt")
 theme_override_font_sizes/font_size = 20
 disabled = true
 text = "Multiplayer (Coming Soon!)"
 
 [node name="ButtonOptions" type="Button" parent="Background/Menu/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_joqgt")
 theme_override_font_sizes/font_size = 20
 text = "Options"
 
 [node name="ButtonQuit" type="Button" parent="Background/Menu/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_joqgt")
 theme_override_font_sizes/font_size = 20
 text = "Quit"
 
@@ -78,6 +85,7 @@ theme_override_constants/separation = 15
 
 [node name="Options" type="RichTextLabel" parent="Background/Options/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_joqgt")
 theme_override_font_sizes/bold_italics_font_size = 64
 theme_override_font_sizes/italics_font_size = 64
 theme_override_font_sizes/mono_font_size = 64
@@ -89,6 +97,7 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="HSeparator" type="HSeparator" parent="Background/Options/VBoxContainer"]
+modulate = Color(0.635294, 0.0901961, 0, 1)
 layout_mode = 2
 
 [node name="HBoxContainerVolume" type="HBoxContainer" parent="Background/Options/VBoxContainer"]
@@ -98,13 +107,16 @@ theme_override_constants/separation = 30
 [node name="Volume" type="Label" parent="Background/Options/VBoxContainer/HBoxContainerVolume"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("3_joqgt")
 text = "Volume (0%)"
 horizontal_alignment = 1
 
 [node name="HSliderVolume" type="HSlider" parent="Background/Options/VBoxContainer/HBoxContainerVolume"]
+modulate = Color(0.635294, 0.0901961, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+theme = ExtResource("3_joqgt")
 value = 100.0
 
 [node name="HBoxContainerParticles" type="HBoxContainer" parent="Background/Options/VBoxContainer"]
@@ -113,16 +125,19 @@ layout_mode = 2
 [node name="Particles" type="Label" parent="Background/Options/VBoxContainer/HBoxContainerParticles"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("3_joqgt")
 text = "Particles"
 horizontal_alignment = 1
 
 [node name="CheckButtonParticles" type="CheckButton" parent="Background/Options/VBoxContainer/HBoxContainerParticles"]
+modulate = Color(0.635294, 0.0901961, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 6
 button_pressed = true
 
 [node name="ButtonBack" type="Button" parent="Background/Options/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_joqgt")
 theme_override_font_sizes/font_size = 20
 text = "Back"
 

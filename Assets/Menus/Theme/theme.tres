@@ -1,0 +1,108 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://dl3j2x4xwv50o"]
+
+[ext_resource type="FontFile" uid="uid://bmo742ihr560h" path="res://Assets/Fonts/operation-napalm-font/OperationNapalm-nRBWO.ttf" id="1_hwe4u"]
+[ext_resource type="FontFile" uid="uid://benvgy5uynutv" path="res://Assets/Fonts/operation-napalm-font/OperationNapalmItalic-1GgAv.ttf" id="2_54ypf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eect4"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tptk5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.635294, 0.0901961, 0, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.635294, 0.0901961, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1htk"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qivtr"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbr5o"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[resource]
+Button/colors/font_color = Color(0.635294, 0.0901961, 0, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.635294, 0.0901961, 0, 1)
+Button/colors/font_hover_color = Color(0.635294, 0.0901961, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0.635294, 0.0901961, 0, 1)
+Button/colors/font_outline_color = Color(0.635294, 0.0901961, 0, 1)
+Button/colors/font_pressed_color = Color(0.635294, 0.0901961, 0, 1)
+Button/colors/icon_focus_color = Color(0.635294, 0.0901961, 0, 1)
+Button/colors/icon_hover_color = Color(0.928411, 0.15185, 7.70092e-07, 1)
+Button/colors/icon_hover_pressed_color = Color(0.635294, 0.0901961, 0, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_hwe4u")
+Button/styles/disabled = SubResource("StyleBoxFlat_eect4")
+Button/styles/focus = SubResource("StyleBoxFlat_tptk5")
+Button/styles/hover = SubResource("StyleBoxFlat_m1htk")
+Button/styles/normal = SubResource("StyleBoxFlat_qivtr")
+Button/styles/pressed = SubResource("StyleBoxFlat_tbr5o")
+CheckButton/colors/font_color = Color(0.635294, 0.0901961, 0, 1)
+CheckButton/fonts/font = ExtResource("1_hwe4u")
+Label/colors/font_color = Color(0.635294, 0.0901961, 0, 1)
+Label/fonts/font = ExtResource("1_hwe4u")
+RichTextLabel/colors/default_color = Color(0.635294, 0.0901961, 0, 1)
+RichTextLabel/fonts/bold_font = ExtResource("1_hwe4u")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_54ypf")
+RichTextLabel/fonts/italics_font = ExtResource("1_hwe4u")
+RichTextLabel/fonts/mono_font = ExtResource("1_hwe4u")
+RichTextLabel/fonts/normal_font = ExtResource("1_hwe4u")

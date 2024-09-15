@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=4 uid="uid://doqvohty74srh"]
+[gd_scene load_steps=20 format=4 uid="uid://doqvohty74srh"]
 
 [ext_resource type="Script" path="res://Assets/Player/Scripts/player.gd" id="1_a8sh5"]
 [ext_resource type="Script" path="res://Assets/Player/Scripts/camera_holder.gd" id="2_xi58s"]
 [ext_resource type="PackedScene" uid="uid://bs3cbtanafnmy" path="res://Assets/Guns/Rifle/rifle.tscn" id="3_e5tov"]
 [ext_resource type="Texture2D" uid="uid://bn1e08cb11kde" path="res://Assets/Guns/Rifle/Rifle_7.png" id="4_6p076"]
+[ext_resource type="Theme" uid="uid://dl3j2x4xwv50o" path="res://Assets/Menus/Theme/theme.tres" id="5_y257v"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_it13n"]
 height = 2.93569
@@ -257,15 +258,18 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("5_y257v")
 theme_override_styles/panel = SubResource("StyleBoxFlat_r58qh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CameraHolder/Camera3D/UIHolder/UI"]
 layout_mode = 2
+theme = ExtResource("5_y257v")
 theme_override_constants/separation = 10
 
 [node name="HealthBar" type="ProgressBar" parent="CameraHolder/Camera3D/UIHolder/UI/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
+theme = ExtResource("5_y257v")
 theme_override_colors/font_color = Color(0, 0, 0, 0)
 theme_override_styles/background = SubResource("StyleBoxFlat_77vmn")
 theme_override_styles/fill = SubResource("StyleBoxFlat_uh60w")

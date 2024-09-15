@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://1j36qnbucwni"]
 
 [ext_resource type="Script" path="res://Assets/Guns/Bullet/bullet.gd" id="1_bfork"]
-[ext_resource type="Material" uid="uid://bv7c6nntp3mbm" path="res://Assets/Guns/Bullet/pmaterial.tres" id="2_lfes4"]
+[ext_resource type="Material" path="res://Assets/Guns/Bullet/RifleParticle.tres" id="2_lfes4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c10pu"]
 albedo_color = Color(0.447059, 0.964706, 0.866667, 1)
