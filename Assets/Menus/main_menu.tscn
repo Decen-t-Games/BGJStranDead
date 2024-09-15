@@ -1,0 +1,132 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctx0gcdslvpjh"]
+
+[ext_resource type="Script" path="res://Assets/Menus/Scripts/main_menu_controller.gd" id="1_wnej0"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wnej0")
+
+[node name="Background" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 1119.0
+offset_bottom = 658.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Menu" type="CenterContainer" parent="Background"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/Menu"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Title" type="RichTextLabel" parent="Background/Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+bbcode_enabled = true
+text = "[center] [b] STRANdEAD [/b] [/center]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HSeparator" type="HSeparator" parent="Background/Menu/VBoxContainer"]
+layout_mode = 2
+
+[node name="ButtonSingleplayer" type="Button" parent="Background/Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Singeplayer"
+
+[node name="ButtonMultiplayer" type="Button" parent="Background/Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+disabled = true
+text = "Multiplayer (Coming Soon!)"
+
+[node name="ButtonOptions" type="Button" parent="Background/Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Options"
+
+[node name="ButtonQuit" type="Button" parent="Background/Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Quit"
+
+[node name="Options" type="CenterContainer" parent="Background"]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/Options"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Options" type="RichTextLabel" parent="Background/Options/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+bbcode_enabled = true
+text = "[center] [b] Options [/b] [/center]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HSeparator" type="HSeparator" parent="Background/Options/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainerVolume" type="HBoxContainer" parent="Background/Options/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Volume" type="Label" parent="Background/Options/VBoxContainer/HBoxContainerVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Volume (0%)"
+horizontal_alignment = 1
+
+[node name="HSliderVolume" type="HSlider" parent="Background/Options/VBoxContainer/HBoxContainerVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 100.0
+
+[node name="HBoxContainerParticles" type="HBoxContainer" parent="Background/Options/VBoxContainer"]
+layout_mode = 2
+
+[node name="Particles" type="Label" parent="Background/Options/VBoxContainer/HBoxContainerParticles"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Particles"
+horizontal_alignment = 1
+
+[node name="CheckButtonParticles" type="CheckButton" parent="Background/Options/VBoxContainer/HBoxContainerParticles"]
+layout_mode = 2
+size_flags_horizontal = 6
+button_pressed = true
+
+[node name="ButtonBack" type="Button" parent="Background/Options/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Back"
+
+[connection signal="pressed" from="Background/Menu/VBoxContainer/ButtonSingleplayer" to="." method="_on_button_singleplayer_pressed"]
+[connection signal="pressed" from="Background/Menu/VBoxContainer/ButtonOptions" to="." method="_on_button_options_pressed"]
+[connection signal="pressed" from="Background/Menu/VBoxContainer/ButtonQuit" to="." method="_on_button_quit_pressed"]
+[connection signal="drag_ended" from="Background/Options/VBoxContainer/HBoxContainerVolume/HSliderVolume" to="." method="_on_h_slider_volume_drag_ended"]
+[connection signal="toggled" from="Background/Options/VBoxContainer/HBoxContainerParticles/CheckButtonParticles" to="." method="_on_check_button_particles_toggled"]
+[connection signal="pressed" from="Background/Options/VBoxContainer/ButtonBack" to="." method="_on_button_back_pressed"]

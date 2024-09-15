@@ -1,0 +1,287 @@
+[gd_scene load_steps=19 format=4 uid="uid://doqvohty74srh"]
+
+[ext_resource type="Script" path="res://Assets/Player/Scripts/player.gd" id="1_a8sh5"]
+[ext_resource type="Script" path="res://Assets/Player/Scripts/camera_holder.gd" id="2_xi58s"]
+[ext_resource type="PackedScene" uid="uid://bs3cbtanafnmy" path="res://Assets/Guns/Rifle/rifle.tscn" id="3_e5tov"]
+[ext_resource type="Texture2D" uid="uid://bn1e08cb11kde" path="res://Assets/Guns/Rifle/Rifle_7.png" id="4_6p076"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_it13n"]
+height = 2.93569
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2te01"]
+resource_name = "material_7"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("4_6p076")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8jqg3"]
+_surfaces = [{
+"aabb": AABB(-0.0625, -0.0625, -0.0625, 0.1875, 0.25, 0.5),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcABAABAAUABQABAAAABwACAAYABgACAAMABQAAAAcABwAAAAIAAQAEAAMAAwAEAAYA"),
+"name": "material_7",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAD//wAA//8AAAAAAAAAAP//AAAAAAAA/////wAAAAAAAAAAAAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x7wfe"]
+resource_name = "blockbench_export_mesh8"
+_surfaces = [{
+"aabb": AABB(-0.0625, -0.0625, -0.0625, 0.1875, 0.25, 0.5),
+"attribute_data": PackedByteArray("AAAAAP9/AAAAAP8//3//PwAA/z//f/8/AAD/f/9//3//L///AAD///8v/38AAP9//68AAP9/AAD/r/9//3//f/9f/3//j/9//1//v/+P/7//L/9//1//f/8v/7//X/+/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_2te01"),
+"name": "material_7",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8jqg3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r58qh"]
+bg_color = Color(0.0296, 0.0356667, 0.04, 0.352941)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0, 0, 0, 0)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_77vmn"]
+bg_color = Color(0.448737, 0, 0.00847407, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uh60w"]
+bg_color = Color(0.835318, 0, 0.0346714, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1awq"]
+bg_color = Color(0.142598, 0.382367, 0.206097, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ckbq"]
+bg_color = Color(0.200996, 0.576089, 0.292623, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iti03"]
+bg_color = Color(0.0151468, 0.276901, 0.352709, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66rmt"]
+bg_color = Color(2.21401e-06, 0.542002, 0.680391, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id="Animation_gd4w8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraHolder/WeaponHolder/Hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.103534, -0.348886, -0.496343)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CameraHolder/WeaponHolder/Hand:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0171811, -0.599357, 0.665847)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CameraHolder/WeaponHolder/Rifle:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.202162, -0.543184, -0.426873)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CameraHolder/WeaponHolder/Rifle:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.101229, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hg0mn"]
+resource_name = "shoot"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraHolder/WeaponHolder/Hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.00983454, 0.0394685, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.104, -0.349, -0.5), Vector3(0.104, -0.349, -0.42), Vector3(0.104, -0.349, -0.42), Vector3(0.104, -0.349, -0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CameraHolder/WeaponHolder/Rifle:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.00996509, 0.0395833, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.202, -0.543, -0.427), Vector3(0.202, -0.543, -0.42), Vector3(0.202, -0.543, -0.42), Vector3(0.202, -0.543, -0.427)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CameraHolder/WeaponHolder/Hand:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.00983455, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0171811, -0.599357, 0.665847), Vector3(0.020944, -0.598648, 0.649262), Vector3(0.0171811, -0.599357, 0.665847)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CameraHolder/WeaponHolder/Rifle:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0100956, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.101229, 0), Vector3(0.0349066, -0.102974, -0.0174533), Vector3(0, -0.101229, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pfti0"]
+_data = {
+"RESET": SubResource("Animation_gd4w8"),
+"shoot": SubResource("Animation_hg0mn")
+}
+
+[node name="Player" type="CharacterBody3D" groups=["pausable", "player"]]
+script = ExtResource("1_a8sh5")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4748, 0)
+shape = SubResource("CapsuleShape3D_it13n")
+
+[node name="CameraHolder" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45034, 0)
+script = ExtResource("2_xi58s")
+
+[node name="WeaponHolder" type="Node3D" parent="CameraHolder"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0.0428789)
+
+[node name="Hand" type="MeshInstance3D" parent="CameraHolder/WeaponHolder"]
+transform = Transform3D(0.479998, -0.212929, -0.469584, 0.460821, 0.323409, -0.0143035, 0.337521, -0.138741, 0.687336, 0.103534, -0.348886, -0.496343)
+layers = 3
+mesh = SubResource("ArrayMesh_x7wfe")
+skeleton = NodePath("")
+
+[node name="Rifle" parent="CameraHolder/WeaponHolder" instance=ExtResource("3_e5tov")]
+transform = Transform3D(0.49744, 0, -0.0505281, 0, 0.5, 0, 0.0505281, 0, 0.49744, 0.202162, -0.543184, -0.426873)
+
+[node name="Camera3D" type="Camera3D" parent="CameraHolder"]
+cull_mask = 1048573
+current = true
+
+[node name="UIHolder" type="Node3D" parent="CameraHolder/Camera3D"]
+
+[node name="UI" type="PanelContainer" parent="CameraHolder/Camera3D/UIHolder"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -123.0
+offset_right = 346.0
+offset_bottom = -24.0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_r58qh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CameraHolder/Camera3D/UIHolder/UI"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HealthBar" type="ProgressBar" parent="CameraHolder/Camera3D/UIHolder/UI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_styles/background = SubResource("StyleBoxFlat_77vmn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uh60w")
+
+[node name="StaminaBar" type="ProgressBar" parent="CameraHolder/Camera3D/UIHolder/UI/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_styles/background = SubResource("StyleBoxFlat_m1awq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2ckbq")
+
+[node name="HeatingBar" type="ProgressBar" parent="CameraHolder/Camera3D/UIHolder/UI/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_styles/background = SubResource("StyleBoxFlat_iti03")
+theme_override_styles/fill = SubResource("StyleBoxFlat_66rmt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pfti0")
+}
+
+[editable path="CameraHolder/WeaponHolder/Rifle"]

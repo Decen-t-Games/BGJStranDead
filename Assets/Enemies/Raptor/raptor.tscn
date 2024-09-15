@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnj5vmqga46u7"]
+
+[ext_resource type="Script" path="res://Assets/Enemies/Raptor/Scripts/raptor.gd" id="1_pp263"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_r1qnq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jtgoq"]
+
+[node name="Raptor" type="CharacterBody3D" groups=["enemies", "pausable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_pp263")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_r1qnq")
+
+[node name="Hitbox" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_jtgoq")
+
+[node name="Navigator" type="NavigationAgent3D" parent="."]
+
+[connection signal="navigation_finished" from="Navigator" to="." method="_on_navigator_navigation_finished"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://beg3frux7k0yp"]
+
+[ext_resource type="Script" path="res://Assets/Enemies/Zombie/zombie.gd" id="1_x0k4p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r6vda"]
+size = Vector3(1.5, 2.5, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7b6s4"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2ggx3"]
+material = SubResource("StandardMaterial3D_7b6s4")
+size = Vector3(1, 2, 1)
+
+[node name="Zombie" type="CharacterBody3D" groups=["enemies", "pausable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02699, 0)
+script = ExtResource("1_x0k4p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_r6vda")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+unique_name_in_owner = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_2ggx3")
